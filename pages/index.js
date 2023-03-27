@@ -1,44 +1,41 @@
-import { Hero, Selection } from "../sections";
-import Head from 'next/head';
+import { Hero, Selection } from '../sections'
+import Head from 'next/head'
 
 const heroProps = {
-  image: { src: "/img/heroimg.png", alt: "", width: 1000, height: 1680 },
-  title: "Agency procurement, outsourced.",
-  description: "Start the process here",
-  ctaText: "Start",
-};
+  image: { src: '/img/heroimg.png', alt: '', width: 1000, height: 1680 },
+  title: 'Agency procurement, outsourced.',
+  description: 'Start the process here',
+  ctaText: 'Start',
+}
 
 const selectionProps = {
-  image: {src: "/img/background.png", alt: ""},
-  title: "Managed agency selection",
-  description: "Strengthen your onboarding process",
-  videoImage: {src: "/img/video.png", alt: "", width: 1000, height: 1680 },
+  image: { src: '/img/background.png', alt: '' },
+  title: 'Managed agency selection',
+  description: 'Strengthen your onboarding process',
+  videoImage: { src: '/img/video.png', alt: '', width: 1000, height: 1680 },
   cards: [
     {
       id: 1,
-      url: '/',
-      logo: {src: "/img/logo-brief.png", alt: "", w: 53, h: 48 },
-      title: "Brief",
-      description: "Complete brief writing or simple guidance on what to include, we've got you covered.",
-      sectionWidth:80
+      url: '#',
+      logo: { src: '/img/logo-brief.png', alt: '', w: 53, h: 48 },
+      title: 'Brief',
+      description: `Complete <strong>brief writing or simple guidance</strong> on what to include, we've got you covered.`,
     },
     {
       id: 2,
-      url: '/',
-      logo: {src: "/img/logo-search.png", alt: "", w: 53, h: 48 },
-      title: "Search",
-      description: "In-depth agency search covering; criteria matching, door knocking and due-dilligence vetting.",
-      sectionWidth:90
+      url: '#',
+      logo: { src: '/img/logo-search.png', alt: '', w: 53, h: 48 },
+      title: 'Search',
+      description: `In-depth agency <strong>search covering; criteria matching</strong>, door knocking and due-dilligence vetting.`,
     },
     {
       id: 3,
-      url: '/',
-      logo: {src: "/img/logo-pitch.png", alt: "", w: 53, h: 48 },
-      title: "Pitch",
-      description: "Comprehensive pitch management, including comms, diary management and pitch hosting.",
-      sectionWidth:100
-    }
-  ]
+      url: '#',
+      logo: { src: '/img/logo-pitch.png', alt: '', w: 53, h: 48 },
+      title: 'Pitch',
+      description: `Comprehensive <strong>pitch management</strong>, including comms, diary management and pitch hosting.`,
+    },
+  ],
 }
 
 export default function Home() {
@@ -58,5 +55,5 @@ export default function Home() {
         {/** Other sections */}
       </div>
     </>
-  );
+  )
 }

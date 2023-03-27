@@ -1,5 +1,5 @@
-import { StyledSectionTinyHeading } from "./elements";
+import { StyledSectionTinyHeading } from './elements'
 
 export const SectionTinyHeading = ({ ...props }) => {
-  return <StyledSectionTinyHeading {...props} />;
-};
+  return <StyledSectionTinyHeading {...props} />
+}

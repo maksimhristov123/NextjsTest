@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Image from 'next/image'
 
 import {
   StyledTextContainer,
@@ -8,7 +8,7 @@ import {
   StyledDescription,
   StyledCTAContainer,
   StyledImageContainer,
-} from "./elements";
+} from './elements'
 
 export const Hero = ({ image, title, description, ctaText, ...props }) => {
   return (
@@ -21,8 +21,14 @@ export const Hero = ({ image, title, description, ctaText, ...props }) => {
         </StyledCTAContainer>
       </StyledTextContainer>
       <StyledImageContainer>
-        <Image layout="responsive" src={image.src} alt={image.alt} width={image.width} height={image.height} />
+        <Image
+          layout="responsive"
+          src={image.src}
+          alt={image.alt}
+          width={image.width}
+          height={image.height}
+        />
       </StyledImageContainer>
     </StyledContainer>
-  );
-};
+  )
+}

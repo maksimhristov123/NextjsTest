@@ -1,12 +1,12 @@
-import { ThemeProvider } from "styled-components";
-import { theme } from "~/styles";
+import { ThemeProvider } from 'styled-components'
+import { theme } from '~/styles'
 
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeProvider theme={theme}>
       <Component {...pageProps} />
     </ThemeProvider>
-  );
+  )
 }
 
-export default MyApp;
+export default MyApp

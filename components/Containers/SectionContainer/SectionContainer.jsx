@@ -1,5 +1,5 @@
-import { StyledSectionContainer } from "./elements";
+import { StyledSectionContainer } from './elements'
 
 export const SectionContainer = ({ ...props }) => {
-  return <StyledSectionContainer {...props} />;
-};
+  return <StyledSectionContainer {...props} />
+}

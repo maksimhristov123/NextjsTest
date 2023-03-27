@@ -1,4 +1,5 @@
-import Image from "next/image";
+import Image from 'next/image'
+import Link from 'next/link'
 
 import {
   StyledTextContainer,
@@ -7,35 +8,52 @@ import {
   StyledTitle,
   StyledDescription,
   StyledImageContainer,
-  StyledCard
-} from "./elements";
+  StyledCard,
+  SectionContainerWrapper,
+} from './elements'
 
-export const Selection = ({image, title, description, videoImage, cards, ...props}) => {
-    // console.log(cards)
-    return (
-        <StyledContainer {...props}>
+export const Selection = ({
+  image,
+  title,
+  description,
+  videoImage,
+  cards,
+  ...props
+}) => {
+  // console.log(cards)
+  return (
+    <SectionContainerWrapper {...props}>
+      <Image layout="fill" src={image.src} alt={image.alt} objectFit="cover" />
+      <StyledContainer {...props}>
+        <StyledHeading {...props}>
+          <StyledTitle>{title}</StyledTitle>
+          <StyledDescription>{description}</StyledDescription>
+        </StyledHeading>
 
-            <StyledHeading {...props}>
-                <StyledTitle>{title}</StyledTitle>
-                <StyledDescription>{description}</StyledDescription>
-            </StyledHeading>
+        <StyledImageContainer>
+          <Image
+            layout="responsive"
+            src={videoImage.src}
+            alt={videoImage.alt}
+            width={videoImage.width}
+            height={videoImage.height}
+          />
+        </StyledImageContainer>
 
-            <Image layout="fill" src={image.src} alt={image.alt} objectFit="cover" />
-
-            <StyledImageContainer>
-                <Image layout="responsive" src={videoImage.src} alt={videoImage.alt} width={videoImage.width} height={videoImage.height}/>
-            </StyledImageContainer>
-
-            <StyledTextContainer>
-                    {cards.map((card) => {
-
-                            return <StyledCard key={card.id} title={card.title} url={card.url} logo={card.logo} description={card.description}/>
-                        
-                        }
-                    )}
-            </StyledTextContainer>
-            
-        </StyledContainer>
-    );
+        <StyledTextContainer>
+          {cards.map((card) => {
+            return (
+              <Link key={card.id} href={`${card.url}`}>
+                <StyledCard
+                  title={card.title}
+                  logo={card.logo}
+                  description={card.description}
+                />
+              </Link>
+            )
+          })}
+        </StyledTextContainer>
+      </StyledContainer>
+    </SectionContainerWrapper>
+  )
 }
-

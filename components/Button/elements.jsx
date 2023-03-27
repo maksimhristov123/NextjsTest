@@ -1,5 +1,5 @@
-import styled, { css } from "styled-components";
-import { SectionInnerHeading } from "~/components";
+import styled, { css } from 'styled-components'
+import { SectionInnerHeading } from '~/components'
 
 const outlinedVariantButton = css`
   background-color: transparent;
@@ -12,7 +12,7 @@ const outlinedVariantButton = css`
     background-color: ${({ theme }) => theme.main};
     color: ${({ theme }) => theme.white};
   }
-`;
+`
 
 const containedVariantButton = css`
   background-color: ${({ theme, color }) => theme[color]};
@@ -20,7 +20,7 @@ const containedVariantButton = css`
   &:hover {
     background-color: ${({ theme, color }) => theme.hover[color]};
   }
-`;
+`
 
 const textVariantButton = css`
   background-color: transparent;
@@ -35,15 +35,19 @@ const textVariantButton = css`
     color: ${({ theme }) => theme.black};
     border-bottom: 1px solid ${({ theme }) => theme.black};
   }
-`;
+`
 
 const buttonVariants = {
   outlined: outlinedVariantButton,
   contained: containedVariantButton,
   text: textVariantButton,
-};
+}
 
-export const StyledButton = styled(({ color = "primary", variant = "contained", ...props }) => <button {...props} />)`
+export const StyledButton = styled(
+  ({ color = 'primary', variant = 'contained', ...props }) => (
+    <button {...props} />
+  ),
+)`
   font-family: sans-serif;
   overflow: hidden;
   text-align: center;
@@ -62,6 +66,8 @@ export const StyledButton = styled(({ color = "primary", variant = "contained", 
   border: none;
   color: white;
   ${({ variant }) => buttonVariants[variant]}
-`;
+`
 
-export const StyledButtonText = styled((props) => <SectionInnerHeading {...props} />)``;
+export const StyledButtonText = styled((props) => (
+  <SectionInnerHeading {...props} />
+))``
